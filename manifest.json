@@ -1,0 +1,24 @@
+{
+  "applications": {
+    "gecko": {
+      "id": "linuxdays-2017-demo-webext@mikk.cz",
+      "strict_min_version": "48.0"
+    }
+  },
+  "manifest_version": 2,
+  "name": "LinuxDays 2017 Demo WebExtension",
+  "description": "WebExtension for demonstration purposes on LinuxDays 2017.",
+  "version": "1.0",
+  "author": "Michal Stanke",
+  "icons": {
+    "48": "stopa.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.linuxdays.cz/*"],
+      "js": ["grayscale-images.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
+
